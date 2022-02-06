@@ -1,0 +1,48 @@
+Take Clone of the project, then cd to enter the folder
+First install xampp and  start both apache and MYSQL server.
+Then create a database using phpMyAdmin (http://localhost/phpmyadmin/)
+>> Database name = portal
+Then 
+1 . cd Mindbowser
+Then create a virtual environment to enable third party libraries
+2. activate virtual env
+Then  run requirpment.txt file
+3. pip install -r requirements.txt
+IF THIS COMPLETES SUCCESSFULLY then proceed,
+Then navigate to the inner folder ‘portal’
+4. cd Portal
+then apply the django migrations by running:
+
+5. python manage.py migrate
+
+then start the server ,
+
+6. python manage.py runserver
+
+Optional
+(For direct login create a super user
+
+python manage.py createsuperuser
+
+then use your credentials for login.)
+
+
+
+
+
+For testing of APIs I have used swagger which is basically a GUI for testing of APIs .
+
+To view swagger just type “docs” in localhost url 
+
+>> (http://127.0.0.1:8000/docs/)
+
+
+
+>> it will display 2 apis  for log in and sign up ,remaining api will once you create an account then you have to login with credentials in the login API it (you can use the same in Django admin panel ).
+>> once you’re login in both  in swagger and Django admin
+1.	Open Django admin > Side bar > click on Auth token app > you will see token is already generated for your user. 
+2.	Just copy the token and come to swagger screen ,then click on Authorize(present in the top right corner)
+3.	Then a small screen will pop up just type    
+4.	token d370568292e07de0cfafd1efcf83316ab4256386 (don’t use it as its mine ,will not work for you)
+5.	Then you’re authenticated and you can view all the API and test it  
+
